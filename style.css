@@ -83,23 +83,23 @@ nav {
 }
 
 @keyframes imgAnim {
-  0%{
+  0% {
     width: 25%;
     height: 100px;
   }
-  25%{
+  25% {
     width: 50%;
     height: 150px;
   }
-  50%{
+  50% {
     width: 75%;
     height: 200px;
   }
-  75%{
+  75% {
     width: 85%;
     height: 250px;
   }
-  100%{
+  100% {
     width: 100%;
     height: 300px;
   }
@@ -154,7 +154,7 @@ nav {
   }
 
   .search {
-    width: 30%;
+    width: 50%;
   }
 
   .search input {
@@ -174,5 +174,29 @@ nav {
     object-fit: contain;
     border-radius: 100%;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 332px) {
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: rgb(43, 43, 43);
+  }
+}
+
+@media (max-width: 264px) {
+  .logo {
+    display: none;
+  }
+  .search {
+    width: 100%;
+  }
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: rgb(43, 43, 43);
   }
 }
