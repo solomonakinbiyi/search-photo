@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+  font-family: calibri;
+  color: whitesmoke;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+}
+
+.navbar {
+  height: 60px;
+  border-bottom: 0.5px solid rgb(88, 88, 88);
+  display: flex;
+  align-items: center;
+  background-color: rgb(56, 56, 56);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-style: italic;
+  font-size: x-large;
+}
+
+.search {
+  width: 40%;
+}
+
+.search input {
+  padding: 7px 20px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+.profileDescription {
+  display: flex;
+  align-items: center;
+}
+
+.profileDescription img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding: 0 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background-color: rgb(43, 43, 43);
+  /* animation-name: imgAnim;
+  animation-timing-function: linear;
+  animation-duration: 1.5s; */
+}
+
+@keyframes imgAnim {
+  0%{
+    width: 25%;
+    height: 100px;
+  }
+  25%{
+    width: 50%;
+    height: 150px;
+  }
+  50%{
+    width: 75%;
+    height: 200px;
+  }
+  75%{
+    width: 85%;
+    height: 250px;
+  }
+  100%{
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search {
+    width: 30%;
+  }
+
+  .profileDescription span {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    position: sticky;
+    top: 0px;
+  }
+
+  .navbar {
+    height: 60px;
+    border-bottom: 0.5px solid rgb(88, 88, 88);
+    display: flex;
+    align-items: center;
+    background-color: rgb(56, 56, 56);
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-style: italic;
+    font-size: x-large;
+  }
+
+  .search {
+    width: 30%;
+  }
+
+  .search input {
+    padding: 7px 20px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+  }
+
+  .profileDescription {
+    display: none;
+  }
+
+  .profileDescription img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+}
